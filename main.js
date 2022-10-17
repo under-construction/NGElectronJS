@@ -29,9 +29,6 @@ function createWindow () {
 }
 
 app.on('ready', createWindow)
-app.whenReady().then(() => {
-    ipcMain.on('getRequest', getRequest)
-})
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
